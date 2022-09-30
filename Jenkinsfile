@@ -11,7 +11,7 @@ pipeline {
         stage('build node') {
           steps{
               sh 'docker-compose up -d'
-              sh 'docker run Dockerfile'
+              sh 'docker run dockerfile'
           }
         }
             }

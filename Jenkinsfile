@@ -8,6 +8,11 @@ pipeline {
                 sh './ssh-nginx.sh'
                   }
             }
+        stage('dun dockerfile') {
+          steps {
+            sh 'docker run Dockerfile'
+          }
+        }
         stage('build node') {
           steps{
              sh 'chmod +x npm-build.sh'

@@ -5,7 +5,6 @@ pipeline {
         stage('run docker compose') {
             steps {
                 sh 'docker-compose down'
-                sh 'docker rm -a'
             }
             steps {
                 sh 'docker-compose up -d'

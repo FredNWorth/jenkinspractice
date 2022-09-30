@@ -8,9 +8,9 @@ pipeline {
                 sh './ssh-nginx.sh'
                   }
             }
-        stage('dun dockerfile') {
+        stage('get files') {
           steps {
-            sh 'docker run Dockerfile'
+            sh 'git clone https://gitlab.com/Reece-Elder/devops-m5-nodeproject.git'
           }
         }
         stage('build node') {

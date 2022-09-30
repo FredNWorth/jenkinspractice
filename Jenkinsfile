@@ -10,9 +10,8 @@ pipeline {
             }
         stage('build node') {
           steps{
-            sh 'npm i --update'
-            sh 'npm build'
-            sh 'npm run'
+             sh 'chmod +x npm-build.sh'
+             sh './npm-build.sh'
           }
         }
             }

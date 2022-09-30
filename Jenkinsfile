@@ -1,10 +1,18 @@
 pipeline {
     agent any
 
+    // stages {
+    //     stage('run docker compose') {
+    //         steps {
+    //             sh 'docker-compose up -d'
+    //         }
+    //     }
+    // }
     stages {
-        stage('run docker compose') {
-            steps {
-                sh 'docker-compose up -d'
+        stage('run bash file') {
+            setps {
+                sh 'chmod ssh-nginx.sh'
+                sh './ssh-nginx.sh'
             }
         }
     }

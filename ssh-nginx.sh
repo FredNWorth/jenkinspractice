@@ -5,8 +5,6 @@ sudo apt update
 sudo apt install curl -y
 curl https://get.docker.com/ | sudo bash
 sudo usermod -aG docker ubuntu
-docker pull node
-docker run --name my-node -d -p 5000:5000 node
-sudo apt install nodejs npm -y
-echo "Yay, it ran!"
+git clone https://gitlab.com/Reece-Elder/devops-m5-nodeproject.git
 EOF
+echo "Yay, it ran!"

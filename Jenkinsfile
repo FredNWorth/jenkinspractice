@@ -8,15 +8,10 @@ pipeline {
                 sh './ssh-nginx.sh'
                   }
             }
-        // stage('get files') {
-        //   steps {
-        //     sh 'git clone https://gitlab.com/Reece-Elder/devops-m5-nodeproject.git'
-        //   }
-        // }
         stage('build node') {
           steps{
-             sh 'chmod +x npm-build.sh'
-             sh './npm-build.sh'
+              sh 'docker-compose up -d'
+              sh 'docker run Dockerfile'
           }
         }
             }

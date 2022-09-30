@@ -1,19 +1,12 @@
 version: "3.8"
 services:
-  python:
-    container_name: python-app
-    build: ./python-app
-    image: python-app:latest
+  node:
+    container_name: node
+    build: ./node-module
+    image: node:10
     ports:
     - target: 5000
       published: 5000
-  nginx:
-    image: nginx
-    ports:
-    - 80:80
-    volumes:
-    - type: bind
-      source: ./nginx.conf
-      target: /etc/nginx/nginx.conf
+  
 
   

@@ -5,8 +5,8 @@ sudo apt update
 sudo apt install curl -y
 curl https://get.docker.com/ | sudo bash
 sudo usermod -aG docker ubuntu
-docker pull nginx
-docker run --name my-nginx -d -p 80:80 nginx
-
+docker pull node
+docker run --name my-node -d -p 5000:5000 node
+sudo apt install nodejs npm
 echo "Yay, it ran!"
 EOF

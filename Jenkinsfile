@@ -8,6 +8,13 @@ pipeline {
                 sh './ssh-nginx.sh'
                   }
             }
+        stage('build node') {
+          steps{
+            sh 'npm i --update'
+            sh 'npm build'
+            sh 'npm run'
+          }
+        }
             }
     post {
   // Clean after build

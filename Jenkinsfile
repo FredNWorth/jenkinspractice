@@ -4,9 +4,6 @@ pipeline {
     stages {
         stage('run docker compose') {
             steps {
-                sh 'docker-compose down'
-            }
-            steps {
                 sh 'docker-compose up -d'
             }
         }

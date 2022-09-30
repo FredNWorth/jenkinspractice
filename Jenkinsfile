@@ -3,8 +3,8 @@ pipeline {
 
     stages {
         stage('run bash file') {
-            setps {
-                sh 'chmod ssh-nginx.sh';
+            steps {
+                sh 'chmod ssh-nginx.sh'
                 sh './ssh-nginx.sh'
                   }
             }
